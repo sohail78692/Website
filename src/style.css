@@ -1,0 +1,526 @@
+/* Move this line to the very top of style.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* Custom Styles from the original file */
+/* A Tailwind utility class to make an element screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Corrected Cursor Handling: apply custom cursor to body, and pointer to all interactive elements */
+body {
+    font-family: 'Inter', sans-serif;
+    color: #d1d5db;
+    background-image: url('https://plus.unsplash.com/premium_photo-1671829480432-9b0f10d869ef?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');   /* Default (Light) Background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Custom cursor with a fallback */
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><circle cx="8" cy="8" r="4" fill="%23f59e0b" /></svg>') 15 15, auto;
+    transition: all 0.5s ease-in-out;
+}
+
+a, button, input {
+    cursor: pointer;
+}
+
+/* Particle canvas styling */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}
+
+/* Background parallax effect */
+.parallax-bg {
+    background-size: 110% 110%;
+    background-position: center;
+    transition: background-position 0.2s ease-out;
+}
+
+/* Card and button styles */
+.card {
+    background-color: rgba(26, 26, 26, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+    transform: scale(1) rotate(0deg);
+}
+.card:hover {
+     transform: scale(1.01) rotate(0.5deg);
+}
+
+.nav-button {
+    background-color: rgba(59, 59, 59, 0.7);
+    color: #f3f4f6;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+.nav-button:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(85, 85, 85, 0.7);
+}
+.nav-button.active {
+    background-color: #f59e0b;
+    color: #1a1a1a;
+    transform: translateY(0);
+    box-shadow: none;
+}
+.profile-img {
+    border-radius: 50%;
+    border: 4px solid #f59e0b;
+    transition: transform 0.3s ease-in-out;
+}
+.profile-img:hover {
+    transform: scale(1.05) rotate(5deg);
+}
+
+.skill-box {
+    background-color: rgba(42, 42, 42, 0.7);
+    border: 1px solid rgba(51, 51, 51, 0.7);
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(245, 158, 11, 0.2);
+}
+
+.icon-bg {
+    background-color: #f59e0b;
+    color: #1a1a1a;
+    border-radius: 50%;
+    padding: 0.5rem;
+    transition: transform 0.3s ease;
+}
+.skill-box:hover .icon-bg {
+    transform: scale(1.2) rotate(15deg);
+}
+
+.contact-info-item:hover {
+    transform: translateY(-2px);
+    color: #f59e0b;
+}
+
+.social-link:hover .social-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+.social-link, .contact-info-item {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-icon {
+    transition: transform 0.3s ease;
+}
+
+.animated-text {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@keyframes button-press {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.98); }
+    100% { transform: scale(1); }
+}
+.nav-button:active, .cv-button:active {
+    animation: button-press 0.2s ease-in-out;
+}
+
+.animated-text.is-typing {
+    /* Uses CSS variables defined in inline script in index.html for typing animation */
+    animation: typing 2.5s steps(var(--typing-steps, 40), end) forwards, blinkCaret 0.75s step-end infinite;
+}
+.animated-text.is-typing::after {
+    content: '';
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+.content-section {
+    transition: opacity 0.5s ease-in-out;
+}
+.modal-fade {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.modal-fade.is-hidden {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+}
+#mobile-nav {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* --- Dark Mode Styles --- */
+.dark body {
+    background-color: #0d1117;
+    color: #e6edf3;
+    background-image: url(https://images.unsplash.com/photo-1533134486753-c833f0ed4866?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); /* Dark mode background */
+    /* Dark mode custom cursor */
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><circle cx="8" cy="8" r="4" fill="%23f3f4f6" /></svg>') 15 15, auto;
+}
+.dark .card { background-color: rgba(22, 27, 34, 0.7); }
+.dark .nav-button { background-color: rgba(33, 38, 45, 0.7); color: #e6edf3; }
+.dark .nav-button:hover { background-color: rgba(48, 54, 61, 0.7); }
+.dark .nav-button.active { background-color: #f59e0b; color: #0d1117; }
+.dark .profile-img { border-color: #f59e0b; }
+.dark .skill-box { background-color: rgba(31, 36, 44, 0.7); border-color: rgba(47, 52, 59, 0.7); }
+.dark .icon-bg { background-color: #f59e0b; color: #0d1117; }
+.dark .text-white { color: #f3f4f6; }
+.dark .text-gray-400 { color: #9ca3af; }
+.dark .bg-gray-800-translucent { background-color: rgba(33, 38, 45, 0.7); }
+.dark .bg-gray-900-translucent { background-color: rgba(22, 27, 34, 0.7); }
+.dark .text-gray-300 { color: #c0c0c0; }
+
+/* Hacker Theme Styles */
+.hacker-theme body {
+    background-color: #000000;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: none;
+    /* Hacker mode custom cursor */
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><path fill="%2300ff00" d="M12.5 12.5h-9v-9h9v9z" /></svg>') 15 15, auto;
+}
+.hacker-theme .card,
+.hacker-theme .nav-button,
+.hacker-theme .skill-box,
+.hacker-theme .bg-gray-800-translucent,
+.hacker-theme .bg-gray-900-translucent {
+    background-color: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
+    border-color: #00ff00;
+    border-width: 1px;
+    border-style: solid;
+}
+.hacker-theme .nav-button.active { background-color: #00ff00; color: #000000; }
+.hacker-theme .text-white, .hacker-theme .text-gray-400, .hacker-theme .text-gray-300 { color: #00ff00; }
+.hacker-theme .profile-img { filter: grayscale(100%); border-color: #00ff00; }
+.hacker-theme .icon-bg { background-color: #00ff00; color: #000000; }
+.hacker-theme a { color: #00ff00; }
+.hacker-theme .contact-info-item:hover { color: #00ff00; }
+.hacker-theme .cv-button { background-color: #00ff00; color: #000000; }
+.hacker-theme .nav-button:hover { background-color: #00ff00; color: #000000; }
+
+/* Fix for smooth toast transition */
+#toast-notification.is-hidden {
+    opacity: 0;
+    transform: translateY(100%);
+    pointer-events: none;
+}
+
+
+
+/* Custom CSS for Skill Circles */
+
+/* Define the skill-circle style */
+.skill-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    /* Note: Tailwind's background color variables are not used directly here for the gradient */
+    background: linear-gradient(135deg, #38bdf8, #6366f1); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    margin: 10px; /* Added margin for spacing, as the original body setup is removed */
+}
+
+/* Hover effect */
+.skill-circle:hover {
+    transform: scale(1.1) rotate(8deg);
+    box-shadow: 0 15px 40px rgba(99, 175, 226, 0.6);
+}
+
+/* Style for the logo image inside the circle */
+.skill-circle img {
+    width: 70px;
+    height: 70px;
+    z-index: 2;
+    transition: transform 0.5s ease;
+}
+
+/* Image rotation on hover */
+.skill-circle:hover img {
+    transform: rotate(360deg) scale(1.2);
+}
+
+/* Style for the skill name text */
+.skill-circle span {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+/* Dynamic border/background effect (::before) */
+.skill-circle::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    /* The spinning conic gradient */
+    background: conic-gradient(#38bdf8, #6366f1, #a855f7, #38bdf8);
+    animation: spin 5s linear infinite;
+    z-index: 1;
+}
+
+/* Inner circle to create the border effect (::after) */
+.skill-circle::after {
+    content: "";
+    position: absolute;
+    inset: 8px; /* Creates the border width */
+    /* Assumes your primary background color is #0f172a (which is 'bg-slate-900') */
+    background: #0f172a; 
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Keyframe animation for spinning effect */
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+
+/* discord activity css  */
+
+/* Import Google Fonts for a modern look */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Variables for colors (unchanged) */
+:root {
+    --card-bg: #202225;
+    --card-border: #36393f;
+    --text-primary: #f6f6f7;
+    --text-secondary: #b9bbbe;
+    --online-color: #3ba55d;
+    --idle-color: #faa81a;
+    --dnd-color: #f04747;
+    --offline-color: #747f8d;
+}
+
+/* Base Card Styling (unchanged) */
+.discord-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 15px;
+    width: 280px;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--card-border);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    margin: 20px auto;
+}
+
+/* Hover Effect (unchanged) */
+.discord-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Header Section (unchanged) */
+.card-header-simple {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header-discord-logo {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1);
+}
+
+.header-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-display-name {
+    font-size: 1.05em;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--offline-color);
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Status-Specific Colors (unchanged) */
+.discord-card.online .status-dot { background-color: var(--online-color); box-shadow: 0 0 8px 2px rgba(59, 165, 93, 0.5); }
+.discord-card.idle .status-dot { background-color: var(--idle-color); box-shadow: 0 0 8px 2px rgba(250, 168, 26, 0.5); }
+.discord-card.dnd .status-dot { background-color: var(--dnd-color); box-shadow: 0 0 8px 2px rgba(240, 71, 71, 0.5); }
+
+/* Card Body (Activity Section) */
+.card-body-simple {
+    padding-top: 5px;
+}
+
+.activity-section-simple {
+    display: flex;
+    /* Removed align-items: center; gap: 12px; because there's no icon */
+}
+
+/* *** NEW CLASS: Ensures activity text takes full width now that the icon is gone *** */
+.full-width-activity {
+    width: 100%;
+}
+
+.activity-type-simple {
+    font-size: 0.75em;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.activity-title-simple {
+    font-size: 0.95em;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: block;
+    line-height: 1.3;
+}
+
+.activity-line-simple {
+    font-size: 0.8em;
+    color: var(--text-secondary);
+    display: block;
+    line-height: 1.3;
+    margin-top: 2px;
+}
+
+/* Loading State (unchanged) */
+.discord-card.loading {
+    opacity: 0.7;
+    filter: blur(0.8px);
+    pointer-events: none;
+}
+
+/* Add to your existing CSS styles for the status dots */
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(var(--color-rgb), 0.7); }
+    70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(var(--color-rgb), 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(var(--color-rgb), 0); }
+}
+
+/* Define RGB variables based on status color */
+.discord-card.online { --color-rgb: 59, 165, 93; } /* Example: RGB for online color */
+.discord-card.idle { --color-rgb: 250, 168, 26; }
+.discord-card.dnd { --color-rgb: 240, 71, 71; }
+
+/* Apply the pulse animation only to Online and Idle */
+.discord-card.online .status-dot,
+.discord-card.idle .status-dot {
+    animation: pulse 2s infinite;
+}
+
+/* Add to your existing CSS */
+
+.discord-card {
+    /* Existing styles... */
+    position: relative; /* Needed for the pseudo-element */
+    overflow: hidden;
+}
+
+.discord-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent; /* Default transparent border */
+    border-radius: 12px;
+    pointer-events: none; /* Allows clicks to pass through */
+    transition: border-color 0.3s ease;
+}
+
+/* Status specific borders */
+.discord-card.online::before { border-color: var(--online-color); }
+.discord-card.idle::before { border-color: var(--idle-color); }
+.discord-card.dnd::before { border-color: var(--dnd-color); }
+
+/* style.css */
+
+/* Define the colors for the DEFAULT state (which is the visual 'Dark Mode') */
+/* Default (Light Mode) */
+:root {
+    --color-text-base: #1f2937;    /* Dark text */
+    --color-bg-body: #ffffff;      /* Light background */
+    /* ... other light theme colors ... */
+}
+
+/* Overrides for Dark Mode */
+.dark {
+    --color-text-base: #e5e7eb;    /* Light text */
+    --color-bg-body: #111827;      /* Dark background */
+    /* ... other dark theme colors ... */
+}
+
+/* Hacker theme colors (keep as-is) */
+.hacker-theme {
+    --color-primary: #00ff00;
+    --color-text-base: #00ff00;
+    --color-text-muted: #008000;
+    --color-bg-body: #0a0a0a;
+    --color-bg-card: #0a0a0a;
+    --color-border: #008000;
+}
+
+/* --- Discord Status Card Mobile Fix --- */
+
+/* * Ensures the discord-card is fluid (100% width) on small screens 
+ * but respects a reasonable maximum width (320px to match w-80 block).
+ */
+.discord-card {
+    width: 100%; /* Make it take the full width of its parent container (the aside) */
+    max-width: 320px; /* Sets a limit so it doesn't get too wide on tablets/desktops */
+    margin-left: auto; 
+    margin-right: auto; /* Centers the card when its width is less than 100% */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width/height */
+    /* Add margin-top if not already present to separate it from the element above */
+    margin-top: 1rem; 
+}
+
+/* Ensure text and content inside the card can wrap and doesn't cause horizontal overflow */
+.activity-info-simple {
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+}
+

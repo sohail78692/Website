@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sohail Akhtar | Interactive Portfolio</title>
+    <meta name="description" content="Sohail Akhtar's professional portfolio, showcasing web development projects, skills, and contact information. Discover my work in web design and mobile app development.">
+    <meta name="keywords" content="Sohail Akhtar, web developer, web design, portfolio, mobile apps, JavaScript, HTML, CSS, front-end development, interactive, effects">
+    <meta name="author" content="Sohail Akhtar">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="./output.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="https://i.pinimg.com/originals/a6/0f/db/a60fdb7fc2787c298b43a9680b2f3d8c.png ">
+    
+</head>
+<body class="text-gray-300 p-8 flex items-center justify-center min-h-screen">
+    
+    <canvas id="particles-js"></canvas>
+    
+    <div class="card p-8 w-full max-w-6xl flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8" >
+
+        <aside class="lg:w-1/3 p-6 rounded-2xl flex flex-col items-center text-center">
+            <div class="mb-6">
+                <img src="./image used/profileimage.jpg" alt="Profile Picture" class="profile-img w-36 h-36 animate-fadeInUp" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/144x144/f59e0b/1a1a1a?text=SA';">
+                <h1 id="secret-trigger" class="text-2xl font-bold mt-4 text-white animate-fadeInUp cursor-pointer hover:animate-glow" style="animation-delay: 0.2s;">Sohail Akhtar</h1>
+                <p class="text-sm text-gray-400 mt-1 animate-fadeInUp" style="animation-delay: 0.3s;">Web Developer</p>
+            </div>
+            
+            <div class="w-80 bg-gray-800-translucent rounded-xl p-4 space-y-4 animate-fadeInUp" style="animation-delay: 0.4s;">
+                <div id="copy-email" class="flex items-center space-x-3 contact-info-item cursor-pointer p-2 -m-2 rounded-md transition-colors hover:bg-gray-700/70">
+                    <svg class="w-6 h-6 text-yellow-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2-3H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2V7a2 2 0 00-2-2z"></path></svg>
+                    <span class="text-gray-300 hover:text-yellow-500 transition-colors" data-copy-value="sohail786akh@gmail.com">sohail786akh@gmail.com</span>
+                </div>
+                <div class="flex items-center space-x-3 contact-info-item p-2 -m-2 rounded-md transition-colors">
+                    <svg class="w-6 h-6 text-yellow-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <span class="text-gray-300 hover:text-yellow-500 transition-colors cursor-pointer">January 10, 2006</span>
+                </div>
+                <div id="copy-location" class="flex items-center space-x-3 contact-info-item cursor-pointer p-2 -m-2 rounded-md transition-colors hover:bg-gray-700/70">
+                    <svg class="w-6 h-6 text-yellow-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <span class="text-gray-300 hover:text-yellow-500 transition-colors" data-copy-value="Delhi, India">Delhi, India</span>
+                </div>
+            </div>
+            <a href="YOUR_CV_LINK_HERE" download class="cv-button mt-6 w-full py-3 bg-yellow-500 text-gray-900 rounded-lg font-semibold text-center hover:bg-yellow-600 transition-colors animate-fadeInUp hover:scale-105" style="animation-delay: 0.5s;">
+                Download CV
+            </a>
+            
+            <div id="discord-status" class="discord-card simple-aesthetic loading mb-4 animate-fadeInUp hover:scale-105" style="animation-delay: 0.5s">
+                <div class="card-header-simple">
+                    <img src="./image used/discord-fill-svgrepo-com.svg" alt="Discord Logo" class="header-discord-logo">
+                    <div class="header-status">
+                        <span class="user-display-name">Loading...</span>
+                        <div class="status-dot"></div>
+                    </div>
+                </div>
+
+                <div class="card-body-simple">
+                    <div class="activity-section-simple">
+                        <div class="activity-info-simple full-width-activity">
+                            <div class="activity-type-simple">Status</div>
+                            <span class="activity-title-simple">Fetching Discord Status...</span>
+                            <span class="activity-line-simple"></span>
+                        </div>
+                    </div>
+                </div>
+           </div>
+           
+           <div class="lg:col-span-3 text-center pt-4 mt-8 border-t border-gray-700 w-full">
+            <p class="text-sm text-gray-500">© <span id="current-year"></span> Sohail Akhtar. All rights reserved.</p>
+           </div> 
+              
+        </aside>
+
+        <main class="flex-grow p-6 rounded-2xl">
+            <nav class="flex justify-end space-x-2 mb-8 items-center">
+                <div class="hidden lg:flex space-x-2">
+                    <button data-section="about-section" class="nav-button active px-4 py-2 rounded-full text-sm transition-colors duration-300">About</button>
+                    <button data-section="portfolio-section" class="nav-button px-4 py-2 rounded-full text-sm transition-colors duration-300">Portfolio</button>
+                    <button data-section="blog-section" class="nav-button px-4 py-2 rounded-full text-sm transition-colors duration-300">Blog</button>
+                    <button data-section="contact-section" class="nav-button px-4 py-2 rounded-full text-sm transition-colors duration-300">Contact</button>
+                </div>
+                <button id="theme-toggle" class="nav-button px-3 py-2 rounded-full ml-4" aria-label="Toggle dark/light theme">
+                    <svg id="moon-icon" class="w-6 h-6 transition-transform duration-300 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                    <svg id="sun-icon" class="w-6 h-6 transition-transform duration-300 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                </button>
+                <button id="mobile-menu-toggle" class="nav-button px-3 py-2 rounded-full lg:hidden ml-2" aria-controls="mobile-nav" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </nav>
+            
+            <nav id="mobile-nav" class="fixed inset-y-0 right-0 w-64 bg-gray-900-translucent p-8 z-50 transform translate-x-full transition-transform lg:hidden">
+                <div class="flex justify-end mb-8">
+                    <button id="mobile-menu-close" class="text-white text-3xl">×</button>
+                </div>
+                <div class="flex flex-col space-y-4">
+                    <button data-section="about-section" class="nav-button px-4 py-2 rounded-full text-sm transition-colors duration-300">About</button>
+                    <button data-section="portfolio-section" class="nav-button px-4 py-2 rounded-full text-sm transition-colors duration-300">Portfolio</button>
+                    <button data-section="blog-section" class="nav-button px-4 py-2 rounded-full text-sm transition-colors duration-300">Blog</button>
+                    <button data-section="contact-section" class="nav-button px-4 py-2 rounded-full text-sm transition-colors duration-300">Contact</button>
+                </div>
+            </nav>
+
+            <div id="content-container">
+                <section id="about-section" class="content-section">
+                    <h2 class="text-4xl font-bold mb-6 text-white">
+                        <span id="typing-text" class="animated-text"></span>
+                    </h2>
+                    <p class="text-gray-400 leading-relaxed mb-8">
+                        Hi! I’m Sohail Akhtar, a passionate and curious student exploring the world of programming. I’m constantly learning and experimenting with new technologies, languages, and tools to turn ideas into reality. My journey in coding is driven by curiosity, creativity, and a desire to solve real-world problems through technology.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed mb-8">
+                        I enjoy building projects that challenge me, help me grow, and make a difference. I’m always open to learning, collaborating, and taking on new challenges that push my skills further. Programming isn’t just something I do—it’s how I think, create, and innovate.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed">
+                        Let’s build something amazing together!
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold mt-12 mb-6 text-white" data-aos="fade-up">What I'm Doing</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="skill-box p-6 flex items-start space-x-4" data-aos="zoom-in" data-aos-delay="200">
+                            <span class="icon-bg w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L12 19.25M12 19.25L14.25 17M12 19.25V4.75M4.75 12H19.25"></path></svg>
+                            </span>
+                            <div>
+                                <h4 class="font-semibold text-white">Web Design</h4>
+                                <p class="text-sm text-gray-400 mt-1">The most modern and high-quality design made at a professional level.</p>
+                            </div>
+                        </div>
+                        <div class="skill-box p-6 flex items-start space-x-4" data-aos="zoom-in" data-aos-delay="300">
+                            <span class="icon-bg w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                            </span>
+                            <div>
+                                <h4 class="font-semibold text-white">Web Development</h4>
+                                <p class="text-sm text-gray-400 mt-1">High-quality development of sites at the professional level.</p>
+                            </div>
+                        </div>
+                        <div class="skill-box p-6 flex items-start space-x-4" data-aos="zoom-in" data-aos-delay="400">
+                            <span class="icon-bg w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                            </span>
+                            <div>
+                                <h4 class="font-semibold text-white">Mobile Apps</h4>
+                                <p class="text-sm text-gray-400 mt-1">Professional development of applications for iOS and Android.</p>
+                            </div>
+                        </div>
+                        <div class="skill-box p-6 flex items-start space-x-4" data-aos="zoom-in" data-aos-delay="500">
+                            <span class="icon-bg w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.828-1.574A2 2 0 0110.74 3h2.52a2 2 0 011.664.89l.828 1.574A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </span>
+                            <div>
+                                <h4 class="font-semibold text-white">Photography</h4>
+                                <p class="text-sm text-gray-400 mt-1">I make high-quality photos of any category at a professional level.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="contact-section" class="content-section hidden">
+                    <h2 class="text-4xl font-bold mb-6 text-white">Contact</h2>
+                    <form id="contact-form" class="w-full bg-gray-800-translucent rounded-xl p-6 space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="flex flex-col">
+                                <label for="name" class="text-sm font-medium mb-1 text-gray-300">Your Name</label>
+                                <input type="text" id="name" name="user_name" class="p-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-colors" placeholder="Sohail Akhtar" required>
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="email" class="text-sm font-medium mb-1 text-gray-300">Your Email</label>
+                                <input type="email" id="email" name="user_email" class="p-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-colors" placeholder="sohail786akh@gmail.com" required>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="message" class="text-sm font-medium mb-1 text-gray-300">Message</label>
+                            <textarea id="message" name="message" rows="5" class="p-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-colors" placeholder="Your message..." required></textarea>
+                        </div>
+                        <button type="submit" id="submit-button" class="w-full py-3 bg-yellow-500 text-gray-900 rounded-lg font-semibold hover:bg-yellow-600 transition-colors">
+                            Send Message
+                        </button>
+                        <div id="form-status" class="mt-4 text-center font-medium"></div>
+                    </form>
+                    <p class="text-gray-400 text-center mt-6">or find me on social media:</p>
+                    <div class="w-full bg-gray-800-translucent rounded-xl p-6 space-y-4">
+                        <div class="flex items-center space-x-3 social-link" data-aos="fade-left">
+                            <img src="./image used/github-original.svg" alt="GitHub Logo" class="w-6 h-6 social-icon">
+                            <a href="https://github.com/sohail78692" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-yellow-500 transition-colors">GitHub</a>
+                        </div>
+                        <div class="flex items-center space-x-3 social-link" data-aos="fade-left" data-aos-delay="100">
+                            <img src="./image used/linkedin-original.svg" alt="LinkedIn Logo" class="w-6 h-6 social-icon">
+                            <a href="https://www.linkedin.com/in/sohail-akhtar-49229032a" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-yellow-500 transition-colors">LinkedIn</a>
+                        </div>
+                        <div class="flex items-center space-x-3 social-link" data-aos="fade-left" data-aos-delay="200">
+                            <img src="./image used/reddit-svgrepo-com.svg" alt="Reddit Icon" class="w-6 h-6 social-icon">
+                            <a href="https://www.reddit.com/user/Few_Painting_9276" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-yellow-500 transition-colors">Reddit</a>
+                        </div>
+                        <div class="flex items-center space-x-3 social-link" data-aos="fade-left" data-aos-delay="300">
+                            <img src="./image used/spotify-color-svgrepo-com.svg" alt="Spotify Logo" class="w-6 h-6 social-icon">
+                            <a href="https://open.spotify.com/user/31et4v3lyrqdx4pzgn6w6ddgp2ny?si=e04bad73de9f40ab" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-yellow-500 transition-colors">Spotify</a>
+                        </div>
+                        <div class="flex items-center space-x-3 social-link" data-aos="fade-left" data-aos-delay="300">
+                            <img src="./image used/dev.webp" alt="Spotify Logo" class="w-6 h-6 social-icon">
+                            <a href="https://dev.to/_786_sohail" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-yellow-500 transition-colors">DEV</a>
+                        </div>
+                        
+                    </div>
+                </section>
+
+                <section id="portfolio-section" class="content-section hidden"  >
+                    <h2 class="text-4xl font-bold mb-6 text-white">Portfolio</h2>
+
+                    <h3 class="text-2xl font-bold inline-block px-4 py-2 rounded-lg bg-black-500/20 text-yellow-100 mb-6 tracking-wider shadow-lg shadow-white-400/30 hover:shadow-blue-500/50 transition-shadow duration-500 animate-glow"
+                    data-aos="fade-right" data-aos-once="true" style="animation-duration: 2s; animation-iteration-count: infinite;">PROJECTS</h3>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                        <div class="project-card bg-gray-800-translucent rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300" data-aos="fade-up">
+                            <img src="./image used/soon.svg" alt="Project Image" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold text-white mb-2">Project Title</h3>
+                                <p class="text-gray-400 text-sm mb-4">A brief description of the project highlighting key features and technologies used.</p>
+                                <a href="https://www.youtube.com/" class="text-yellow-500 hover:underline">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-card bg-gray-800-translucent rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300" data-aos="fade-up">
+                            <img src="./image used/soon.svg" alt="Project Image" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold text-white mb-2">Project Title</h3>
+                                <p class="text-gray-400 text-sm mb-4">A brief description of the project highlighting key features and technologies used.</p>
+                                <a href="#" class="text-yellow-500 hover:underline">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-card bg-gray-800-translucent rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300" data-aos="fade-up">
+                            <img src="./image used/soon.svg" alt="Project Image" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold text-white mb-2">Project Title</h3>
+                                <p class="text-gray-400 text-sm mb-4">A brief description of the project highlighting key features and technologies used.</p>
+                                <a href="#" class="text-yellow-500 hover:underline">View Project</a>
+                            </div>
+                        </div>   
+                    </div>
+
+                    <br>
+                    
+                    <h3 class="text-2xl font-bold inline-block px-4 py-2 rounded-lg bg-black-500/20 text-yellow-100 mb-6 tracking-wider shadow-lg shadow-white-400/30 hover:shadow-blue-500/50 transition-shadow duration-500 animate-glow"
+                    data-aos="fade-right" data-aos-once="true" style="animation-duration: 2s; animation-iteration-count: infinite;">SKILLS</h3>
+
+                    <div class="flex justify-center items-center gap-6 flex-wrap">
+                        <div class="skill-circle" data-aos="zoom-in" data-aos-delay="0">
+                            <img src="./image used/html5-original.svg" alt="HTML Logo">
+                            <span>HTML</span>
+                        </div>
+
+                        <div class="skill-circle" data-aos="zoom-in" data-aos-delay="50">
+                            <img src="./image used/css3-original.svg" alt="CSS Logo">
+                            <span>CSS</span>
+                        </div>
+
+                        <div class="skill-circle" data-aos="zoom-in" data-aos-delay="100">
+                            <img src="./image used/javascript-original.svg" alt="JavaScript Logo">
+                            <span>JavaScript</span>
+                        </div>
+
+                        <div class="skill-circle" data-aos="zoom-in" data-aos-delay="150">
+                            <img src="./image used/python-original.svg" alt="Python Logo">
+                            <span>Python</span>
+                        </div>
+
+                        <div class="skill-circle" data-aos="zoom-in" data-aos-delay="200">
+                            <img src="./image used/csharp-original.svg" alt="C# Logo">
+                            <span>C#</span>
+                        </div>
+
+                    </div>
+            
+            
+                        
+                </section>
+                <section id="blog-section" class="content-section hidden">
+                    <h2 class="text-4xl font-bold mb-6 text-white">Blog</h2>
+                    <p class="text-gray-400">Content for the Blog section will go here.</p>
+                    
+                </section>
+            </div>
+        </main>
+    </div>
+    
+    <div id="game-modal" 
+        class="modal-fade is-hidden fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="game-heading"> 
+        <div class="card p-8 rounded-lg text-center relative w-full max-w-sm mx-4">
+            <h2 id="game-heading" class="text-2xl font-bold text-white mb-4">Guess the Number!</h2>
+            <p class="text-gray-400 mb-4">I'm thinking of a number between 1 and 100. Can you guess it?</p>
+            <label for="game-input" class="sr-only">Enter your guess</label>
+            <input type="number" id="game-input" class="w-full p-2 rounded-md bg-gray-700 text-white mb-4 text-center" min="1" max="100" aria-describedby="game-message">
+            <button id="guess-button" class="w-full py-2 rounded-md bg-yellow-500 text-gray-900 font-semibold hover:bg-yellow-600 transition-colors">Guess</button>
+            <p id="game-message" class="mt-4 text-white" aria-live="polite"></p>
+            <button id="close-game" class="absolute top-2 right-4 text-white hover:text-yellow-500 text-3xl">×</button>
+        </div>
+    </div>
+    
+    <div id="toast-notification" class="is-hidden fixed bottom-8 right-8 bg-gray-800 text-white p-4 rounded-lg shadow-xl transition-all duration-300 z-50">
+      <p id="toast-message"></p>
+    </div>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="main.js"></script>
+    
+</body>
+</html>
