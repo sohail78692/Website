@@ -1,10 +1,12 @@
 // main.js - The primary application entry point and controller.
 import { initParticles, updateParticleColor } from './particles.js';
 import { setupNavigation } from './navigation.js';
-import { setupThemeToggle, setupHackerTheme, getParticleColor } from './theme.js';
+import { setupThemeToggle, setupHackerTheme } from './theme.js';
 import { setupGame } from './game.js';
 import { updateDiscordStatus } from './discord.js';
 import { updateCopyrightYear } from './utils.js';
+
+
 
 // --- Element Selectors ---
 const ELEMENT_SELECTORS = {
@@ -144,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     AOS.init({ duration: 1000, once: true });
     
     // Initialize EmailJS (library loaded via <script> tag in index.html)
+    
     emailjs.init('oTKNSCw73fuGWTjUP'); 
     
     // --- Setup all modules, passing required elements/functions ---
@@ -181,3 +184,4 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCopyrightYear(); 
     updateDiscordStatus(); // Also calls setInterval internally
 });
+
