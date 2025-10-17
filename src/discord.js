@@ -1,6 +1,5 @@
 // discord.js - Handles fetching and displaying real-time Discord status.
-
-const DISCORD_ID = '999542874163138690'; // Replace with YOUR Discord User ID
+import { DISCORD_ID } from './emailjs-config.js';
 
 // Helper function to capitalize the first letter
 function capitalize(s) {
