@@ -5,6 +5,7 @@ import { setupThemeToggle, setupHackerTheme } from './theme.js';
 import { setupGame } from './game.js';
 import { updateDiscordStatus } from './discord.js';
 import { updateCopyrightYear } from './utils.js';
+import { EMAIL_JS_KEY } from './emailjs-config.js';
 
 
 
@@ -147,7 +148,14 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize EmailJS (library loaded via <script> tag in index.html)
     
-    emailjs.init('oTKNSCw73fuGWTjUP'); 
+    // Initialize EmailJS using the key generated from src/.env
+    // Note: the generated file `src/emailjs-config.js` is created by the `scripts/generate-config.js` script
+    // and is ignored by git via .gitignore to avoid accidental commits.
+    if (typeof EMAIL_JS_KEY === 'string' && EMAIL_JS_KEY.length > 0) {
+        emailjs.init(EMAIL_JS_KEY);
+    } else {
+        console.warn('EmailJS key not available. Make sure to run `npm run generate-config`.');
+    }
     
     // --- Setup all modules, passing required elements/functions ---
     // Particle Effect

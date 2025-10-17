@@ -1,1 +1,3 @@
+# Ignore generated client config that contains API keys
+/src/emailjs-config.js
 .env
