@@ -230,8 +230,8 @@ a, button, input {
 
 /* Define the skill-circle style */
 .skill-circle {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     /* Note: Tailwind's background color variables are not used directly here for the gradient */
     background: linear-gradient(135deg, #38bdf8, #6366f1); 
@@ -255,8 +255,8 @@ a, button, input {
 
 /* Style for the logo image inside the circle */
 .skill-circle img {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     z-index: 2;
     transition: transform 0.5s ease;
 }
@@ -279,8 +279,8 @@ a, button, input {
 .skill-circle::before {
     content: "";
     position: absolute;
-    width: 200%;
-    height: 200%;
+    width: 150%;
+    height: 150%;
     /* The spinning conic gradient */
     background: conic-gradient(#38bdf8, #6366f1, #a855f7, #38bdf8);
     animation: spin 5s linear infinite;
@@ -523,4 +523,138 @@ a, button, input {
     word-break: break-word;
     white-space: normal;
 }
+
+/* General body styling for centering and DARK MODE */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1a1a1a; 
+    font-family: sans-serif;
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
+}
+
+.social-icons-container {
+    /* Constrain the max width on PC, but allow flexibility on mobile */
+    max-width: 900px; 
+    padding: 10px;
+    width: 95%; /* Use a percentage to be mobile-friendly */
+}
+
+.icon-list {
+    display: flex;
+    /* ⭐ KEY FIX: Allows the items to wrap to the next line when space runs out */
+    flex-wrap: wrap; 
+    justify-content: center; /* Centers the icons horizontally on all screens */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* Space between icons, vertical gap is important for wrapping */
+    gap: 10px; 
+}
+
+.icon-list li a {
+    /* Box properties */
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.05); /* Translucent dark background */
+    
+    /* Icon properties */
+    text-decoration: none;
+    font-size: 26px;
+    
+    /* Transition for smooth effects */
+    transition: all 0.3s ease-in-out;
+    
+    /* Initial Glow: Subtle white border shadow */
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 
+                0 0 5px rgba(0, 0, 0, 0.5); /* Inner box shadow for depth */
+}
+
+/* Hover Effect: Intensifies the glow and color */
+.icon-list li a:hover {
+    transform: translateY(-2px); /* Slight lift */
+    
+    /* Intensifies the white glow and adds a subtle colored neon effect */
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3), 
+                0 0 10px var(--glow-color); 
+}
+
+
+/* --- Icon Specific Colors & Glows --- */
+/* The colors are still used for the icon itself and the hover glow */
+
+.facebook {
+    --icon-color: #4267B2;
+    --glow-color: rgba(66, 103, 178, 0.7);
+}
+
+.instagram {
+    --icon-color: #E1306C;
+    --glow-color: rgba(225, 48, 108, 0.7);
+}
+
+.xtwitter {
+    --icon-color: #f0f0f0;
+    --glow-color: rgba(255, 255, 255, 0.7);
+}
+
+.linkedin {
+    --icon-color: #0077B5;
+    --glow-color: rgba(0, 119, 181, 0.7);
+}
+
+.github {
+    --icon-color: #f0f0f0;
+    --glow-color: rgba(255, 255, 255, 0.7);
+}
+
+.reddit {
+    --icon-color: #FF4500;
+    --glow-color: rgba(255, 69, 0, 0.7);
+}
+
+.spotify {
+    --icon-color: #1DB954;
+    --glow-color: rgba(29, 185, 84, 0.7);
+}
+
+.dev {
+    --icon-color: #f0f0f0;
+    --glow-color: rgba(255, 255, 255, 0.7);
+}
+
+.whatsapp {
+    --icon-color: #25D366;
+    --glow-color: rgba(37, 211, 102, 0.7);
+}
+
+.telegram {
+    --icon-color: #0088CC;
+    --glow-color: rgba(0, 136, 204, 0.7);
+}
+
+.youtube {
+    --icon-color: #FF0000;
+    --glow-color: rgba(255, 0, 0, 0.7);
+}
+
+
+/* Applying the variables to the anchor tag */
+.icon-list li a {
+    color: var(--icon-color);
+}
+
+/* Ensure naturally black icons (X, GitHub, Dev.to) are light for dark backgrounds */
+.xtwitter, .github, .dev {
+    color: #f0f0f0;
+}
+
+
 
