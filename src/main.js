@@ -123,7 +123,7 @@ function setupContactForm() {
 
         // NOTE: The service and template IDs below must be correctly configured in your EmailJS account.
         // It relies on the emailjs library being loaded in index.html
-        emailjs.sendForm('service_mn81ttq', 'template_ew3d0e8', this)
+        emailjs.sendForm('service_id', 'template_id', this)
             .then(function() {
                 showToast("Message sent successfully!", 'success');
                 ELEMENT_SELECTORS.contactForm.reset();
