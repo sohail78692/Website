@@ -1,7 +1,6 @@
-/* Move this line to the very top of style.css */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-/* Custom Styles from the original file */
-/* A Tailwind utility class to make an element screen reader only */
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -14,7 +13,7 @@
     border-width: 0;
 }
 
-/* Corrected Cursor Handling: apply custom cursor to body, and pointer to all interactive elements */
+
 body {
     font-family: 'Inter', sans-serif;
     color: #d1d5db;
@@ -32,7 +31,7 @@ a, button, input {
     cursor: pointer;
 }
 
-/* Particle canvas styling */
+
 #particles-js {
     position: fixed;
     top: 0;
@@ -143,7 +142,7 @@ a, button, input {
 }
 
 .animated-text.is-typing {
-    /* Uses CSS variables defined in inline script in index.html for typing animation */
+    
     animation: typing 2.5s steps(var(--typing-steps, 40), end) forwards, blinkCaret 0.75s step-end infinite;
 }
 .animated-text.is-typing::after {
@@ -226,9 +225,7 @@ a, button, input {
 
 
 
-/* Custom CSS for Skill Circles */
 
-/* Define the skill-circle style */
 .skill-circle {
     width: 120px;
     height: 120px;
@@ -390,10 +387,10 @@ a, button, input {
 
 .activity-section-simple {
     display: flex;
-    /* Removed align-items: center; gap: 12px; because there's no icon */
+    
 }
 
-/* *** NEW CLASS: Ensures activity text takes full width now that the icon is gone *** */
+
 .full-width-activity {
     width: 100%;
 }
@@ -430,7 +427,7 @@ a, button, input {
     pointer-events: none;
 }
 
-/* Add to your existing CSS styles for the status dots */
+
 
 @keyframes pulse {
     0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(var(--color-rgb), 0.7); }
@@ -449,11 +446,11 @@ a, button, input {
     animation: pulse 2s infinite;
 }
 
-/* Add to your existing CSS */
+
 
 .discord-card {
-    /* Existing styles... */
-    position: relative; /* Needed for the pseudo-element */
+    
+    position: relative; 
     overflow: hidden;
 }
 
@@ -475,21 +472,18 @@ a, button, input {
 .discord-card.idle::before { border-color: var(--idle-color); }
 .discord-card.dnd::before { border-color: var(--dnd-color); }
 
-/* style.css */
 
-/* Define the colors for the DEFAULT state (which is the visual 'Dark Mode') */
-/* Default (Light Mode) */
 :root {
     --color-text-base: #1f2937;    /* Dark text */
     --color-bg-body: #ffffff;      /* Light background */
-    /* ... other light theme colors ... */
+    
 }
 
 /* Overrides for Dark Mode */
 .dark {
     --color-text-base: #e5e7eb;    /* Light text */
     --color-bg-body: #111827;      /* Dark background */
-    /* ... other dark theme colors ... */
+    
 }
 
 /* Hacker theme colors (keep as-is) */
@@ -502,29 +496,24 @@ a, button, input {
     --color-border: #008000;
 }
 
-/* --- Discord Status Card Mobile Fix --- */
-
-/* * Ensures the discord-card is fluid (100% width) on small screens 
- * but respects a reasonable maximum width (320px to match w-80 block).
- */
+/
 .discord-card {
-    width: 100%; /* Make it take the full width of its parent container (the aside) */
-    max-width: 320px; /* Sets a limit so it doesn't get too wide on tablets/desktops */
+    width: 100%;
+    max-width: 320px; 
     margin-left: auto; 
-    margin-right: auto; /* Centers the card when its width is less than 100% */
-    box-sizing: border-box; /* Ensures padding and border are included in the element's total width/height */
-    /* Add margin-top if not already present to separate it from the element above */
+    margin-right: auto; 
+    box-sizing: border-box; 
     margin-top: 1rem; 
 }
 
-/* Ensure text and content inside the card can wrap and doesn't cause horizontal overflow */
+
 .activity-info-simple {
     word-wrap: break-word;
     word-break: break-word;
     white-space: normal;
 }
 
-/* General body styling for centering and DARK MODE */
+
 body {
     display: flex;
     justify-content: center;
@@ -533,25 +522,25 @@ body {
     background-color: #1a1a1a; 
     font-family: sans-serif;
     margin: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
+    overflow-x: hidden; 
 }
 
 .social-icons-container {
-    /* Constrain the max width on PC, but allow flexibility on mobile */
+    
     max-width: 900px; 
     padding: 10px;
-    width: 95%; /* Use a percentage to be mobile-friendly */
+    width: 95%; 
 }
 
 .icon-list {
     display: flex;
     /* ⭐ KEY FIX: Allows the items to wrap to the next line when space runs out */
     flex-wrap: wrap; 
-    justify-content: center; /* Centers the icons horizontally on all screens */
+    justify-content: center; 
     list-style: none;
     padding: 0;
     margin: 0;
-    /* Space between icons, vertical gap is important for wrapping */
+    
     gap: 10px; 
 }
 
@@ -587,8 +576,6 @@ body {
 }
 
 
-/* --- Icon Specific Colors & Glows --- */
-/* The colors are still used for the icon itself and the hover glow */
 
 .facebook {
     --icon-color: #4267B2;
@@ -646,12 +633,12 @@ body {
 }
 
 
-/* Applying the variables to the anchor tag */
+
 .icon-list li a {
     color: var(--icon-color);
 }
 
-/* Ensure naturally black icons (X, GitHub, Dev.to) are light for dark backgrounds */
+
 .xtwitter, .github, .dev {
     color: #f0f0f0;
 }
