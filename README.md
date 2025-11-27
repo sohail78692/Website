@@ -96,3 +96,24 @@ Deploy the `src` directory (and any built CSS assets) as the web root.
 
 This project is available under the **MIT License**. Feel free to fork, customize, and build on top of it.
 
+## Support
+
+For issues, questions, or contributions:
+- Open an issue on GitHub
+- Contact: [sohail786akh@gmail.com]
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+**Made with ❤️ by Sohail and lots of ☕**
+
+
